@@ -65,7 +65,12 @@ def load_data():
         else:
             df['Date'] = pd.to_datetime(df['Date'])
         return df
-st.image("profile.jpg", width=100)
+    return None
+
+# Function to create salary projection
+def project_salaries(df, salary_col, years=5):
+    if salary_col not in df.columns:
+        return None
     
     current_avg = df[salary_col].mean()
     # Assume 3% annual growth
@@ -88,14 +93,7 @@ if 'selected_filters' not in st.session_state:
     }
 
 # Header with profile image
-st.markdown("""
-    <div style='display: flex; align-items: center; gap: 20px; margin-bottom: 30px;'>
-        <div>
-            <h1 style='margin: 0;'>💼 Employee Salary Analytics Dashboard</h1>
-            <p style='color: #7f8c8d; margin: 5px 0;'><strong>Comprehensive analysis of employee compensation and demographics</strong></p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+st.image("profile.jpg", width=100)
 
 # Load data
 with st.spinner("Loading data..."):
@@ -395,6 +393,6 @@ st.download_button(
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #7f8c8d;'>Built by "Kevin Kubwimana" using Streamlit | Interactive Data Analytics Dashboard</div>",
+    "<div style='text-align: center; color: #7f8c8d;'>Built with ❤️ using Streamlit | Interactive Data Analytics Dashboard</div>",
     unsafe_allow_html=True
 )
