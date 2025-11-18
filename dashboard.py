@@ -65,12 +65,7 @@ def load_data():
         else:
             df['Date'] = pd.to_datetime(df['Date'])
         return df
-    return None
-
-# Function to create salary projection
-def project_salaries(df, salary_col, years=5):
-    if salary_col not in df.columns:
-        return None
+st.image("profile.jpg", width=100)
     
     current_avg = df[salary_col].mean()
     # Assume 3% annual growth
