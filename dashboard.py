@@ -425,6 +425,6 @@ st.download_button(
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #7f8c8d;'>Built by "Kevin Kubwimana" using Streamlit | Interactive Data Analytics Dashboard</div>",
+    "<div style='text-align: center; color: #7f8c8d;'>Built by """Kevin Kubwimana""" using Streamlit | Interactive Data Analytics Dashboard</div>",
     unsafe_allow_html=True
 )
